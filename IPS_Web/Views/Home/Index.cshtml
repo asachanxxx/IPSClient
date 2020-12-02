@@ -1,0 +1,283 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+}
+@model  IPS_Web.ViewModels.IndexViewModel
+
+<!-- begin:article -->
+    <div class="row">
+        <!-- begin:sidebar -->
+        <div class="col-md-3 col-sm-4 sidebar">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="widget">
+                        <div class="widget-title">
+                            <h3>Cart</h3>
+                        </div>
+                        <ul class="cart list-unstyled">
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-7 col-xs-7">1 <a href="#">Galaxy Tab 4</a></div>
+                                    <div class="col-sm-5 col-xs-5 text-right"><strong> Rs 400.00</strong> <a href="#"><i class="fa fa-trash-o"></i></a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-7 col-xs-7">1 <a href="#">Laptop bag</a> </div>
+                                    <div class="col-sm-5 col-sm-5 text-right"><strong>Rs 200.00</strong> <a href="#"><i class="fa fa-trash-o"></i></a></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled total-price">
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-8 col-xs-8">Shipping</div>
+                                    <div class="col-sm-4 col-xs-4 text-right" id="TS">Rs 0.00</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-8 col-xs-8">Total</div>
+                                    <div class="col-sm-4 col-xs-4 text-right" id="TA">Rs 0.00</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-6 col-xs-6">
+                                        <a class="btn btn-default" href="#">Cart</a>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-6 text-right">
+                                        <a class="btn btn-primary" href="#">Checkout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- break -->
+                    <div class="widget">
+                        <div class="widget-title">
+                            <h3>Category</h3>
+                        </div>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active"><a>Shop in</a></li>
+                            <li><a href="#">PC</a></li>
+                            <li><a href="#">Tablet</a></li>
+                            <li><a href="#">Mobile</a></li>
+                        </ul>
+                    </div>
+                    <!-- break -->
+                    <div class="widget">
+                        <div class="widget-title">
+                            <h3>Payment Confirmation</h3>
+                        </div>
+                        <p>Already make a payment ? please confirm your payment by filling <a href="#">this form</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- end:sidebar -->
+        <!-- begin:content -->
+        <div class="col-md-9 col-sm-8 content">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li class="active">Cart</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#">Cart</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Payment</a></li>
+                    </ul>
+
+                    <h3>Your Cart</h3>
+                    <hr>
+
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Description</th>
+                                <th>Available</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="../../theams/product1.jpg" class="img-cart"></td>
+                                <td><strong>Samsung Galaxy Tab � 4 10.1 16GB</strong></td>
+                                <td><label id="Id1A"><strong>10</strong></label></td>
+                                <td>
+                                    <form class="form-inline">
+                                        <input class="form-control" value="0" type="text" name="QTY11" id="QTY11" value="0">
+                                        <!--  <button data-original-title="Update" rel="tooltip" title="" class="btn btn-default"  ><i class="fa fa-pencil"></i></button>   -->
+                                        <a data-original-title="Update" onclick="calculate(1)" class="btn btn-default" rel="tooltip" title=""><i class="fa fa-pencil"></i></a>
+                                        <span style="padding: 10px;">&nbsp;</span>
+                                    </form>
+                                </td>
+                                <td style="white-space: nowrap;">Rs 400.00</td>
+                                <td style="white-space: nowrap;"><label id="Tot1">Rs 00.00</label></td>
+                            </tr>
+                            <tr>
+                                <td><img src="../../theams/product2.jpg" class="img-cart"></td>
+                                <td><strong>Laptop Bag</strong></td>
+                                <td><label id="Id2A"><strong>20</strong></label></td>
+                                <td>
+                                    <form class="form-inline">
+                                        <input class="form-control" value="0" type="text" name="QTY12" id="QTY12" value="0">
+                                        <!--  <button data-original-title="Update" rel="tooltip" title="" class="btn btn-default" onclick="calculate(2)"><i class="fa fa-pencil"></i></button>    -->
+                                        <a data-original-title="Update" onclick="calculate(2)" class="btn btn-default" rel="tooltip" title=""><i class="fa fa-pencil"></i></a>
+                                        <span style="padding: 6px;">&nbsp;</span>
+                                    </form>
+                                </td>
+                                <td style="white-space: nowrap;">Rs 200.00</td>
+                                <td style="white-space: nowrap;"><label id="Tot2">Rs 00.00</label></td>
+                            </tr>
+                            <tr>
+                                <td><img src="../../theams/wrist-watch.jpg" class="img-cart"></td>
+                                <td><strong>Wrist Watch GE2</strong></td>
+                                <td><label id="Id3A"><strong>12</strong></label></td>
+                                <td>
+                                    <form class="form-inline">
+                                        <input class="form-control" value="0" type="text" name="QTY13" id="QTY13" value="0">
+                                        <a data-original-title="Update" onclick="calculate(3)" class="btn btn-default" rel="tooltip" title=""><i class="fa fa-pencil"></i></a>
+                                        <span style="padding: 6px;">&nbsp;</span>
+                                    </form>
+                                </td>
+                                <td style="white-space: nowrap;">Rs 100.00</td>
+                                <td style="white-space: nowrap;"><label id="Tot3">Rs 00.00</label></td>
+                            </tr>
+                            <tr>
+                                <td colspan="6">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-right">Total Product</td>
+                                <td style="white-space: nowrap;"><label id="ToSu">Rs 00.00</label></td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-right">Total Shipping</td>
+                                <td style="white-space: nowrap;"><label id="ToSF">Rs 00.00</label></td>
+                                <input value="0" type="hidden" name="Totqty" id="Totqty" value="0">
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-right"><strong>Total</strong></td>
+                                <td style="white-space: nowrap;"><label id="ToTF">Rs 00.00</label></td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                    <table class="table table-bordered table-striped">
+
+                        <tbody>
+                            <tr>
+                                <td class="text-left">
+                                    <b>Shipping Address</b>
+                                    <br>31D Rufino Pacific Tower<br>
+                                    6784 Ayala Ave corner<br>
+                                    Ayala Avenue <br>
+                                    V.A. Rufino Street, Makati City.<br>
+                                    Philippines.<br>
+                                    00639175366701<br>
+                                    <a href="">Change Delivery Details...</a>
+                                </td>
+
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <a href="#" class="btn btn-default">Continue Shopping</a>
+
+                    <form action="/Home/IndexPost" method="post">
+                        <input value="0" type="text" name="ToSu1" id="ToSu1" placeholder="Enter value here" />
+                        <p>
+                            <input type="submit" value="Proceed to checkout" name="B" class="btn btn-primary pull-right">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+      
+        <!-- end:content -->
+    </div>
+<!-- end:article -->
+
+@section calculationOnIndex{
+    <script>
+        function calculate(id) {
+            var qty = "";
+            var uPr = "";
+            var Tot = document.getElementById('ToSu1').value;
+            var Totqty = document.getElementById('Totqty').value;
+            var Tot1 = parseInt(0);
+            var Tot2 = parseInt(0);
+            var Tot3 = parseInt(0);
+            var Tot4 = parseInt(0);
+            var id = id;
+
+            if (id == 1) {
+
+                qty = document.getElementById('QTY11').value;
+                document.getElementById("Id1A").innerHTML = (10 - qty);
+                Tot1 = qty * 400.00;
+                document.getElementById("Tot1").innerHTML = Tot1;
+                document.getElementById("ToSu").innerHTML = Tot1;
+                document.getElementById('ToSu1').value = Tot1;
+                document.getElementById("ToSF").innerHTML = qty;
+                document.getElementById("ToTF").innerHTML = Tot1;
+                document.getElementById("TotCart").innerHTML = qty;
+                document.getElementById('Totqty').value = qty;
+                document.getElementById("TS").innerHTML = qty;
+                document.getElementById("TA").innerHTML = Tot1;
+
+            }
+
+            else if (id == 2) {
+                qty = document.getElementById('QTY12').value;
+                document.getElementById("Id2A").innerHTML = (20 - qty);
+                Tot2 = qty * 200.00;
+                Totqty = parseInt(Totqty) + parseInt(qty);
+                document.getElementById("Tot2").innerHTML = Tot2;
+
+                Tot = parseInt(Tot) + parseInt(Tot2);
+                document.getElementById("ToSu").innerHTML = Tot;
+                document.getElementById('ToSu1').value = Tot;
+                document.getElementById("ToSF").innerHTML = Totqty;
+                document.getElementById("ToTF").innerHTML = Tot;
+                document.getElementById("TotCart").innerHTML = Totqty;
+                document.getElementById("TS").innerHTML = Totqty;
+                document.getElementById("TA").innerHTML = Tot;
+            }
+
+            else if (id == 3) {
+                qty = document.getElementById('QTY13').value;
+                document.getElementById("Id3A").innerHTML = (12 - qty);
+                Tot3 = qty * 100.00;
+                Totqty = parseInt(Totqty) + parseInt(qty);
+                document.getElementById("Tot3").innerHTML = Tot3;
+
+                Tot = parseInt(Tot) + parseInt(Tot3);
+                document.getElementById("ToSu").innerHTML = Tot;
+                document.getElementById('ToSu1').value = Tot;
+                document.getElementById("ToSF").innerHTML = Totqty;
+                document.getElementById("ToTF").innerHTML = Tot;
+                document.getElementById("TotCart").innerHTML = Totqty;
+                document.getElementById("TS").innerHTML = Totqty;
+                document.getElementById("TA").innerHTML = Tot;
+            }
+
+        }
+    </script>
+}

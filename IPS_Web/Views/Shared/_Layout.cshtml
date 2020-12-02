@@ -1,0 +1,257 @@
+﻿@*<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>*@
+
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="author" content="Asanka Iddamalgoda">
+    <link rel="shortcut icon" href="#">
+
+    <title>TechShop</title>
+
+    @Styles.Render("~/themeCSS")
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+     <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+     <![endif]-->
+
+</head>
+<body>
+
+
+    <!-- begin:navbar -->
+    <nav class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+        <div class="container2">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#techeshop-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="../../theams/shopingNew.png" height="70" alt="" /></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="techeshop-navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="disabled">Store Locations</a></li>
+                    <li class="active"><a href="#">Colombo</a></li>
+                    <li><a href="#">California</a></li>
+                    <li><a href="#">Bali</a></li>
+                    <li class="divider-vertical"></li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- end:navbar -->
+    <!-- begin:content -->
+    <div class="container">
+        <!-- begin:logo -->
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="logo">
+                    <h1><a href="#">Tech<span>shop</span> </a></h1>
+                    <p>Shopping cart</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="account">
+                    <ul>
+                        <li id="your-account">
+                            <div class="hidden-xs">
+                                <h4><a href="#">Your Account</a></h4>
+                                <p>Welcome, <a href="#">log in</a></p>
+                            </div>
+                            <div class="visible-xs">
+                                <a href="#" class="btn btn-primary"><i class="fa fa-user"></i></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hidden-xs">
+                                <h4><a href="#">Cart</a></h4>
+                                <p><label id="TotCart"><strong> 0</strong></label> Product(s)</p>
+                            </div>
+                            <div class="visible-xs">
+                                <a href="#" class="btn btn-primary"><span class="cart-item">2</span> <i class="fa fa-shopping-cart"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end:logo -->
+        <!-- begin:nav-menus -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="nav-menus">
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Desktop <b class="caret"></b></a>
+                            <ul class="dropdown-menu" id="menu1">
+                                <li>
+                                    <a href="#">Motherboards <b class="caret"></b></a>
+                                    <ul class="dropdown-menu sub-menu">
+                                        <li><a href="#">Desktop</a></li>
+                                        <li><a href="#">Tablets</a></li>
+                                        <li><a href="#">Mobile</a></li>
+                                        <li><a href="#">Gaming</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Processors</a></li>
+                                <li><a href="#">VGA</a></li>
+                                <li><a href="#">Speakers</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Gaming</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Tablet <b class="caret"></b></a>
+                            <ul class="dropdown-menu" id="menu1">
+                                <li><a href="#">Apple</a></li>
+                                <li><a href="#">Android</a></li>
+                                <li><a href="#">Windows</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Mobile</a></li>
+                        <li><a href="#">Authorized Dealer</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end:nav-menus -->
+
+        @RenderBody()
+
+        <!-- begin:footer -->
+        <div class="row">
+            <div class="col-md-12 footer">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="widget">
+                            <h3><span>Contact Info</span></h3>
+                            <address>
+                                No. 22, Bantul, Baker Street, Colombo 06<br>
+                                Call Us : (0274) 4411005<br>
+                                Email : techshop@gmail.com<br>
+                            </address>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="widget">
+                            <h3><span>Customer Support</span></h3>
+                            <ul class="list-unstyled list-star">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Payment Option</a></li>
+                                <li><a href="#">Shopping Tips</a></li>
+                                <li><a href="#">Information</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="widget">
+                            <h3><span>Discover our store</span></h3>
+                            <ul class="list-unstyled list-star">
+                                <li><a href="#">Colombo</a></li>
+                                <li><a href="#">California</a></li>
+                                <li><a href="#">Bali</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="widget">
+                            <h3><span>Get Our Newsletter</span></h3>
+                            <p>Subscribe to our newsletter and get exclusive deals straight to your inbox!</p>
+                            <form>
+                                <input class="form-control" name="email" placeholder="Your Email : " type="email"><br>
+                                <input class="btn btn-warning" value="Subscribe" type="submit">
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- end:footer -->
+        <!-- begin:copyright -->
+        <div class="row">
+            <div class="col-md-12 copyright">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 copyright-left">
+                        <p>Copyright � TechShop 2012-2014. All right reserved.</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 copyright-right">
+                        <ul class="list-unstyled list-social">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end:copyright -->
+
+    </div>
+
+    @Scripts.Render("themescripts")
+    @RenderSection("calculationOnIndex", required: false)
+
+
+
+</body>
+</html>

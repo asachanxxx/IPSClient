@@ -1,0 +1,146 @@
+﻿@model IPS_Web_Final.PostBackVM
+
+@{
+    ViewBag.Title = "IndexPost";
+}
+
+<h2>IndexPost</h2>
+
+<div>
+    <h4>PostBackVM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BankRefID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BankRefID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrencyCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrencyCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IPGTransactionID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IPGTransactionID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerRefID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerRefID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TxnAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TxnAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TxnStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TxnStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServerTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServerTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaskedAccNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaskedAccNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LanguageCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LanguageCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerVar1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerVar1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerVar2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerVar2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerVar3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerVar3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MerVar4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MerVar4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FailReason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FailReason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthCode)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,446 @@
+﻿@{
+    ViewBag.Title = "PostBackFromPayment";
+
+}
+@model  IPS_Web.ViewModels.PostBackVM
+
+<div class="row">
+    <!-- begin:content -->
+    <div class="col-md-9 col-sm-8 content">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Transaction Response Page</h3>
+                <hr>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr style="color: #4F8A10; background-color: #DFF2BF;">
+                            <th colspan="3">
+                                <h4>
+                                    <font>
+                                        <b>
+                                            Transaction Success.
+                                            Merchant Reference ID :
+                                        </b>
+                                    </font>
+                                </h4>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td width="195">Bank Reference Id</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=BankRefID%></td>
+                        </tr>
+                        <tr>
+                            <td width="195">Currency Code</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=CurrencyCode%></td>
+                        </tr>
+                        <tr>
+                            <td width="195">IPG Transaction ID</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=IPGTransactionID%></td>
+                        </tr>
+                        <tr>
+                            <td width="195">Merchant Reference ID</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=MerRefID%></td>
+                        </tr>
+                        <tr>
+                            <td width="195">Transaction Amount</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=TxnAmount%></td>
+                        </tr>
+                        <tr>
+                            <td width="195">Transaction Status</td>
+                            <td width="10">:</td>
+
+                            <td width="395"><span><font color="#4F8A10"><b>SUCCESS</b></font></span></td>
+                        </tr>
+                        <tr>
+                            <td width="195">Server Time</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=ServerTime%></td>
+                        </tr>
+                        <tr>
+                            <td width="195">Masked Account Number</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=MaskedAccNo%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((LanguageCode != null) && (LanguageCode.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Language Code</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=LanguageCode%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((MerVar1 != null) && (MerVar1.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Merchant Variable 1</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=MerVar1%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((MerVar2 != null) && (MerVar2.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Merchant Variable 2</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=MerVar2%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((MerVar3 != null) && (MerVar3.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Merchant Variable 3</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=MerVar3%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((MerVar4 != null) && (MerVar4.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Merchant Variable 4</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=MerVar4%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((CustomerName != null) && (CustomerName.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Card Holder's Name</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=CustomerName%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+                        <!--
+                        >%
+                            if ((FailReason != null) && (FailReason.length() > 0))
+                            {
+                        %>
+                          <tr>
+                            <td width="195">Failed Reason</td>
+                            <td width="10">:</td>
+                            <td width="395">>?%=FailReason%></td>
+                          </tr>
+                        >%
+                            }
+                        %>
+
+
+                        -->
+                        <%
+                        if ((AuthCode != null) && (AuthCode.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Auth Code</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=AuthCode%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <tr>
+                            <td width="195">Error Code</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=sErrorCode%></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+                <%
+                } else {
+                %>
+
+
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr bgcolor="#ebccd1" style="color: #a94442;">
+                            <th colspan="3">
+                                <h4>
+                                    <font>
+                                        <b>
+                                            Transaction Rejected.
+                                            Merchant Reference ID : <%=MerRefID%>
+                                        </b>
+                                    </font>
+                                </h4>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%
+                        if ((BankRefID != null) && (BankRefID.length() > 0)) {
+                        %>
+
+                        <tr>
+                            <td width="195">Bank Reference Id</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=BankRefID%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((CurrencyCode != null) && (CurrencyCode.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Currency Code</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=CurrencyCode%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((IPGTransactionID != null)
+                        && (IPGTransactionID.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">IPG Transaction ID</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=IPGTransactionID%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((MerRefID != null) && (MerRefID.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Merchant Reference ID</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=MerRefID%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((TxnAmount != null) && (TxnAmount.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Transaction Amount</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=TxnAmount%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((TxnStatus != null) && (TxnStatus.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Transaction Status</td>
+                            <td width="10">:</td>
+
+                            <td width="395"><span><font color="#a94442"><b><%=TxnStatus %></b></font></span></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((ServerTime != null) && (ServerTime.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Server Time</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=ServerTime%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((MaskedAccNo != null) && (MaskedAccNo.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Masked Account Number</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=MaskedAccNo%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((LanguageCode != null) && (LanguageCode.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Language Code</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=LanguageCode%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((MerVar1 != null) && (MerVar1.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Merchant Variable 1</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=MerVar1%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((MerVar2 != null) && (MerVar2.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Merchant Variable 2</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=MerVar2%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((MerVar3 != null) && (MerVar3.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Merchant Variable 3</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=MerVar3%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((MerVar4 != null) && (MerVar4.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Merchant Variable 4</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=MerVar4%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <%
+                        if ((CustomerName != null) && (CustomerName.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Card Holder's Name</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=CustomerName%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+                        <!--
+                        >%
+                            if ((FailReason != null) && (FailReason.length() > 0))
+                            {
+                        %>
+                          <tr>
+                            <td width="195">Failed Reason</td>
+                            <td width="10">:</td>
+                            <td width="395">>?%=FailReason%></td>
+                          </tr>
+                        >%
+                            }
+                        %>
+
+
+                        -->
+                        <%
+                        if ((AuthCode != null) && (AuthCode.length() > 0)) {
+                        %>
+                        <tr>
+                            <td width="195">Auth Code</td>
+                            <td width="10">:</td>
+                            <td width="395"><%=AuthCode%></td>
+                        </tr>
+                        <%
+                        }
+                        %>
+
+                        <tr>
+                            <td width="195">Error Code</td>
+                            <td width="10">:</td>
+                            <%
+                            System.out.println("--sErrorCode------"+sErrorCode);
+
+                            %>
+                            <td width="395"><%=sErrorCode%></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+                <%
+                }
+                %>
+
+                <table class="table table-bordered table-striped">
+
+                    <tbody>
+                        <tr>
+                            <td class="text-left">
+                                <b>Shipping Address</b> <br>31D
+                                Rufino Pacific Tower<br> 6784 Ayala Ave corner<br>
+                                Ayala Avenue <br> V.A. Rufino Street, Makati City.<br>
+                                Philippines.<br> 00639175366701<br> <a href="">
+                                    Change
+                                    Delivery Details...
+                                </a>
+                            </td>
+
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- end:content -->
+</div>
+

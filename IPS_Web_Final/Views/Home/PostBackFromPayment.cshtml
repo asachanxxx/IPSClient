@@ -1,0 +1,105 @@
+﻿@model IPS_Web_Final.PostBackVM
+
+@{
+    ViewBag.Title = "PostBackFromPayment";
+}
+
+<style type="text/css">
+    .cart_area table tbody tr td:first-child {
+        width: 1% !important;
+    }
+    .table td, .table th {
+        padding: 0.55rem;
+    }
+
+</style>
+
+<div class="cart_area section_padding_100 clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 p-2" style="background-color:#ff084e">
+                <h3 class="text-white mb-0">Payment Summary <small class="badge badge-warning"> Status:   @Html.DisplayFor(model => model.TxnStatus)</small> </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 bg-dark">
+                <p class="text-white mb-0">  @Html.DisplayFor(model => model.FailReason) </p>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-6">
+                <table class="table">
+
+                    <tbody>
+                        <tr>
+                            <td class="text-primary"> @Html.DisplayNameFor(model => model.BankRefID) </td>
+                            <td class="text-dark">  @Html.DisplayFor(model => model.BankRefID) </td>
+                        </tr>
+                        <tr>
+                            <td class="text-primary">  @Html.DisplayNameFor(model => model.CurrencyCode) </td>
+                            <td class="text-dark">  @Html.DisplayFor(model => model.CurrencyCode) </td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-primary">  @Html.DisplayNameFor(model => model.IPGTransactionID) </td>
+                            <td class="text-dark">  @Html.DisplayFor(model => model.IPGTransactionID) </td>
+                        </tr>
+                        <tr>
+                            <td class="text-primary">  @Html.DisplayNameFor(model => model.MerRefID) </td>
+                            <td class="text-dark">  @Html.DisplayFor(model => model.MerRefID) </td>
+                        </tr>
+                        <tr>
+                            <td class="text-primary">  @Html.DisplayNameFor(model => model.TxnAmount) </td>
+                            <td class="text-dark">  @Html.DisplayFor(model => model.TxnAmount) </td>
+                        </tr>
+                        <tr>
+                            <td class="text-primary">  @Html.DisplayNameFor(model => model.ServerTime) </td>
+                            <td class="text-dark">  @Html.DisplayFor(model => model.ServerTime) </td>
+                        </tr>
+                        <tr>
+                            <td class="text-primary">  @Html.DisplayNameFor(model => model.MaskedAccNo) </td>
+                            <td class="text-dark">  @Html.DisplayFor(model => model.MaskedAccNo) </td>
+                        </tr>
+                        <tr>
+                            <td class="text-primary">  @Html.DisplayNameFor(model => model.LanguageCode) </td>
+                            <td class="text-dark">  @Html.DisplayFor(model => model.LanguageCode) </td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-primary">  @Html.DisplayNameFor(model => model.CustomerName) </td>
+                            <td class="text-dark">  @Html.DisplayFor(model => model.CustomerName) </td>
+                        </tr>
+                        <tr>
+                            <td class="text-primary">  @Html.DisplayNameFor(model => model.AuthCode) </td>
+                            <td class="text-dark">  @Html.DisplayFor(model => model.AuthCode) </td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-primary">  @Html.DisplayNameFor(model => model.MerVar1) </td>
+                            <td class="text-dark">  @Html.DisplayFor(model => model.MerVar1) </td>
+                        </tr>
+                        <tr>
+                            <td class="text-primary">  @Html.DisplayNameFor(model => model.MerVar2) </td>
+                            <td class="text-dark">  @Html.DisplayFor(model => model.MerVar2) </td>
+                        </tr>
+                        <tr>
+                            <td class="text-primary">  @Html.DisplayNameFor(model => model.MerVar3) </td>
+                            <td class="text-dark">  @Html.DisplayFor(model => model.MerVar3) </td>
+                        </tr>
+                        <tr>
+                            <td class="text-primary">  @Html.DisplayNameFor(model => model.MerVar4) </td>
+                            <td class="text-dark">  @Html.DisplayFor(model => model.MerVar4) </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
